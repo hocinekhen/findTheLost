@@ -8,12 +8,23 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { FoundPage } from '../pages/found/found';
+import { SearchPage } from '../pages/search/search';
+import { Camera } from '@ionic-native/camera';
+import { DetailsPage } from '../pages/details/details';
+import { NotificationsPage } from '../pages/notifications/notifications';
+import { MainPage } from '../pages/main/main';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    FoundPage,
+    SearchPage,
+    DetailsPage,
+    NotificationsPage,
+    MainPage
   ],
   imports: [
     BrowserModule,
@@ -23,11 +34,17 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    FoundPage,
+    SearchPage,
+    DetailsPage,
+    NotificationsPage,
+    MainPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

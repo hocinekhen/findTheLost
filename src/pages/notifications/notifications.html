@@ -1,0 +1,31 @@
+<!--
+  Generated template for the NotificationsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+
+
+</ion-header>
+
+
+<ion-content padding>
+  
+<div *ngFor="let notif of notifications" (click)="NotificationClicked(notif)" style= "overflow: hidden; width: 100%; height: 80px; 
+background-color:white;box-shadow: 0px 0px 6px 0.5px rgba(0,0,0,0.2);
+ ;border-radius: 5px; display: flex ; align-items: stretch; 
+margin-bottom: 10px;">
+  <div style="width: 100px; height: 80px; 
+  background-image:url('../../assets/imgs/1385438_648629675182265_400252951_n.jpg');
+   background-size:cover;">
+  </div>
+  <div style="width : 100% ;
+         
+ padding-left: 7px;padding-top: 5px;padding-right: 5px; position : relative ; ">
+    <p style="margin:0px;">une personne a publié une photo d'un enfant qui ressemble elmohim avec un taux {{notif.rate*100}}%</p>
+    <p style="font-size: 12px; line-height: 3px; color: #bdc3c7; display: block; position: absolute ;bottom:0px; right: 3px ; ">{{notif.date}}</p>
+  </div>
+</div>
+</ion-content>
